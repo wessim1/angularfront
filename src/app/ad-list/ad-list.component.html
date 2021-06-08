@@ -31,13 +31,7 @@
 </div>
 
 <div class="form-group col-sm-3">
-  <select [(ngModel)] ="category" class="form-control" id="category">
   
-    <option  *ngFor ="let cat  of categories" > 
-      {{cat}}
-    </option>
-  
-  </select>
 <button class ="btn btn-success" (click)="searchPrice(min,max,category,type,city)" id="btn">Search</button>
 </div>
 </div>

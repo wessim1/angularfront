@@ -16,7 +16,7 @@ export class AuthComponent implements OnInit {
 
   user : Users;
 
-  Users : Users[]=[new Users(1,'salim', 'salim','brahim','123456','salim.brahim@esprit.tn'),
+  Users : Users[]=[new Users(1,'wessim', 'wessim','Hamami','123456','wessim.hamami@esprit.tn'),
   new Users(1,'yasmine', 'yasmine','yasmine','123','yasmine.njim@esprit.tn'),
   new Users(1,'ameni', 'yasmine','yasmine','123','ameni.souelmia@esprit.tn')];  
   constructor(private service : AuthService , private router : Router) { 
@@ -30,8 +30,13 @@ export class AuthComponent implements OnInit {
     this.isLoginMode=!this.isLoginMode;
   }
   onSubmit(form : NgForm){
-   
+    console.log(form);
+    
     this.message=this.service.login(form.value);
+    console.log(this.isLoginMode);
+    console.log(this.message);
+    
+    
       if(!this.isLoginMode){
          this.service.Users.push(form.value);
       }else{
@@ -44,6 +49,8 @@ export class AuthComponent implements OnInit {
 
       this.Users.filter((u) =>{
                u.email  == form.value.email
+               console.log(u);
+               
           });
           localStorage.setItem("user" ,   this.Users[0].user_id.toString() );
 

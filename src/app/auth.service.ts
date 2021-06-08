@@ -9,7 +9,7 @@ export class AuthService {
 
 
   name:String;
-  Users : Users[]=[new Users(1,'salim', 'salim','brahim','123456','salim.brahim@esprit.tn'),
+  Users : Users[]=[new Users(1,'wessim', 'wessim','Hamami','123456','wessim.hamami@esprit.tn'),
   new Users(1,'yasmine', 'yasmine','yasmine','123','yasmine.njim@esprit.tn'),
   new Users(1,'ameni', 'yasmine','yasmine','123','ameni.souelmia@esprit.tn')];  
 constructor(
@@ -19,6 +19,8 @@ constructor(
 }
 public login(u:Users){
   for(var item of this.Users){
+    console.log(item);
+    
       if ((item.email==u.email)&&(item.password==u.password))
       {
           this.name= item.userName;
