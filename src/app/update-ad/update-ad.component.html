@@ -1,0 +1,105 @@
+<div class="container">
+  <form>
+ <div class="form-row">
+   <div class="col-md-4 mb-3">
+     <label for="validationServer013">title</label>
+     <input type="text" class="form-control is-valid" id="validationServer013" placeholder="title " name="title"
+
+     [(ngModel)]="realstate.title"
+       required>
+     <div class="valid-feedback">
+
+     </div>
+   </div>
+   <div class="col-md-4 mb-3">
+     <label for="validationServer023">descriptionn </label>
+     <input type="text" class="form-control is-valid" id="validationServer023" placeholder="description" name="description"
+     [(ngModel)]="realstate.description " required>
+     <div class="valid-feedback">
+       Looks good!
+     </div>
+   </div>
+
+   <div class="col-md-4 mb-3">
+  
+      <div class=" form-group">
+        <label for="type">Category</label>
+        <select name="category" [(ngModel)]="selected" class="form-control" id="real_estates"  >
+          <option  name="category" *ngFor="let realstate  of categories"  value="{{selected}}">{{realstate}}
+
+
+        
+          </option>
+
+         
+          
+
+</select>
+{{selected}}
+      </div>
+     
+    
+    </div>
+
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">city </label>
+      <input type="text" class="form-control is-valid" id="validationServer023" placeholder="cuty" name="city"
+      [(ngModel)]="realstate.city " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">area </label>
+      <input type="number" class="form-control is-valid" id="validationServer023" placeholder="area" name="area"
+      [(ngModel)]="realstate.area " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">Adress </label>
+      <input type="text" class="form-control is-valid" id="validationServer023" placeholder="adress" name="Adress"
+      [(ngModel)]="realstate.adress " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">date </label>
+      <input type="date" class="form-control is-valid" id="validationServer023" placeholder="creation_date" name="creation_date"
+      [(ngModel)]="realstate.creation_date " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">price </label>
+      <input type="number" class="form-control is-valid" id="validationServer023" placeholder="price" name="price"
+      [(ngModel)]="realstate.price " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationServer023">numberroom </label>
+      <input type="number" class="form-control is-valid" id="validationServer023" placeholder="nbRoom" name="nbRoom"
+      [(ngModel)]="realstate.nb_room " required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+
+ 
+ </div>
+ 
+
+ <button class="btn btn-primary" (click)="updaterestate()" type="submit">Submit form</button>
+</form></div>

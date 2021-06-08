@@ -1,0 +1,25 @@
+<section class="jumbotron ">
+    <div class="container">
+  <div class="row">
+
+    <div class="col-md-3 card">
+ <img class="card-img-top responsive " src="{{'data:image/jpeg;base64,' + ad.pictures}}" alt="Card image cap"  >
+ <div class="card-body">
+   <h5 class="card-title">{{ad.real_estates.title}}</h5>
+   <span class="card-text"><h6>{{ ad.description }} </h6>
+     <h6>Type: {{ad.type}}</h6>
+     <h6>Price: {{ad.real_estates.price}}$</h6> </span>
+     <h6>Adress: {{ad.real_estates.adress}}</h6> 
+     <h6>City: {{ad.real_estates.city}}</h6>
+     <h6>Area: {{ad.real_estates.area}}m²</h6> 
+     <h6>Nbr of room: {{ad.real_estates.nb_room}}</h6> 
+     
+
+     <a href="http://localhost:4200/favoriteads">
+      <img   id="image" class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Emblem-favorites.svg/1200px-Emblem-favorites.svg.png" alt="Card image cap"></a>
+    </div>
+ </div>
+
+ </div>
+ </div>
+ </section>

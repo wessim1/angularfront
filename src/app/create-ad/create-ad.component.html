@@ -1,0 +1,59 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12 ">
+      <div class=" card">
+        <div class=" card-header">
+          <h5 class=" title">  Create ad </h5>
+        </div>
+        <div class=" card-body">
+          <form>
+            <div class=" row">
+            
+              <div class=" col-md-3 px-md-6">
+                <div class=" form-group">
+                  <label> Description </label>
+                  <input  name="description" [(ngModel)] ="ad.description" class="form-control" id="type" />
+
+                  {{ad.description}}
+                </div>
+              </div>
+              <div class=" col-md-4 pl-md-6">
+                <div class=" form-group">
+                  <label for="type">Type</label>
+                  <select name="type" [(ngModel)] ="ad.type" class="form-control" id="type">
+                    <option name="type" value="rent" >Rent</option>
+                    <option name="type" value="sell">Sell</option>
+          
+          </select>
+                </div>
+                {{ad.type}}
+              </div>
+
+             
+            </div>
+           
+           
+        
+            <input   type="file" (change)="onFileChanged2($event)">
+            <img [src]="imageUrl2" height="200" width="200" *ngIf="imageUrl2">
+
+
+
+
+
+
+
+          </form>
+        </div>
+        <div class=" col-md-12 "></div>
+        <div class=" card-footer">
+          <a href="http://localhost:4200/managementads">
+          <button class=" btn btn-fill btn-danger" (click)="saveAd()" type="submit">Submit</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,95 @@
+
+
+<!-- <section class="p-4">
+    <div id="main-search" class="row">
+      <div class="form-group col-sm-3" >
+          <label for="city">City</label>
+          <input [(ngModel)] ="city" type="text" placeholder="example: Tunis" id="city" class="form-control" />
+      </div>
+      <div class="form-group col-sm-2">
+          <label for="price">Price</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input [(ngModel)]="min" id = "price min" type="text" placeholder={{min}} class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input [(ngModel)]="max" id = "price max" type="text" placeholder="max" class="form-control" aria-label="Amount (to the nearest dollar)">
+          
+          </div>
+      </div>
+      <div class="form-group col-sm-2">
+          <label for="type">Type</label>
+          <select [(ngModel)] ="type" class="form-control" id="type">
+            <option>Rent</option>
+            <option>Sell</option>
+  
+  </select>
+  </div>
+  
+  <div class="form-group col-sm-3">
+  <button class ="btn btn-success" (click)="searchPrice(min,max,category,type,city)" id="btn">Search</button>
+  </div>
+  </div>
+  
+  
+  </section> -->
+  <section>
+    <div class="container">
+  <div class="row" *ngIf="fav">
+      {{fav.id}}
+    <div class="col-md-3 card" *ngFor="let ad of fav">
+     
+    <img class="card-img-top" src="{{'data:image/jpeg;base64,' + ad.ads.pictures}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ad.ads.real_estates.title}}</h5>
+      <span class="card-text"><h6>{{ ad.ads.description }} </h6>
+        <h6>Type: {{ad.ads.type}}</h6>
+        <h6>Price: {{ad.ads.real_estates.price}}$</h6> </span>
+        <h6>Adress: {{ad.ads.real_estates.adress}}</h6> 
+        <h6>City: {{ad.ads.real_estates.city}}</h6>
+        <h6>Area: {{ad.ads.real_estates.area}}m²</h6> 
+        <h6>Nbr of room: {{ad.ads.real_estates.nbRoom}}</h6> 
+        
+  
+    
+    </div>
+    
+   </div>
+  <div class="col-md-1">
+  
+  </div>
+  </div>
+
+
+  estimation 
+  <div class="row" *ngIf="estim">
+    {{fav.id}}
+  <div class="col-md-3 card" *ngFor="let ad of estim">
+   
+  <img class="card-img-top" src="{{'data:image/jpeg;base64,' + ad.pictures}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ad.real_estates.title}}</h5>
+    <span class="card-text"><h6>{{ ad.description }} </h6>
+      <h6>Type: {{ad.type}}</h6>
+      <h6>Price: {{ad.real_estates.price}}$</h6> </span>
+      <h6>Adress: {{ad.real_estates.adress}}</h6> 
+      <h6>City: {{ad.real_estates.city}}</h6>
+      <h6>Area: {{ad.real_estates.area}}m²</h6> 
+      <h6>Nbr of room: {{ad.real_estates.nbRoom}}</h6> 
+      
+
+    
+  </div>
+  
+ </div>
+<div class="col-md-1">
+
+</div>
+</div>
+  </div>
+  
+  </section>
+  
+ 
+  
+  
